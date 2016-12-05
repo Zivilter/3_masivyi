@@ -46,7 +46,16 @@ namespace masivyi
             }
             Console.WriteLine("Общее число покупателей: {0}", kp);
 
-
+            // Число покупателей расплатившихся наличными
+            int kpn = 0;
+            for (int x = 0; x < n; x++)
+            {
+                for (int y = 0; y < d; y++)
+                {
+                    kpn = kpn + m[x, y, 0];
+                }
+            }
+            Console.WriteLine("Число покупателей расплатившихся наличными: {0}", kpn);
 
         }
     }
