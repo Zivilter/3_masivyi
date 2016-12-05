@@ -31,6 +31,23 @@ namespace masivyi
                     Console.WriteLine("");
                 }
             }
+            
+            // Общее число покупателей
+            int kp = 0;
+            for (int x = 0; x < n; x++)
+            {
+                for (int y = 0; y < d; y++)
+                {
+                    for (int z = 0; z < p; z++)
+                    {
+                        kp = kp + m[x, y, z];
                     }
+                }
+            }
+            Console.WriteLine("Общее число покупателей: {0}", kp);
+
+
+
+        }
     }
 }
