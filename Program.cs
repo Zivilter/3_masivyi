@@ -6,6 +6,39 @@ using System.Threading.Tasks;
 
 namespace masivyi
 {
+    class stek
+    {
+        private int[] el; 
+        private int f;
+        public stek()
+        {
+            this.el=new int[0];
+            this.f=el.Length;
+        }
+
+        public void push(int e)
+        {
+            if (this.f == el.Length)
+            {
+                int[] newEl = new int[this.el.Length + 1];
+                Array.Copy(this.el, 0, newEl, 0, this.f);
+                this.el = newEl;
+                this.el[this.f++] = e;
+            }
+        }
+
+        public int pop()
+        {
+            if (this.el.Length == 0) Console.WriteLine("Не существующий элемент массива");
+
+            this.f -= 1;
+            int e = el[this.f];
+            int[] newEl = new int[this.f];
+            Array.Copy(this.el, 0, newEl, 0, this.f);
+            this.el = newEl;
+            return e;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
@@ -79,7 +112,7 @@ namespace masivyi
                 }
                 if (nr > br) Console.WriteLine("На {0} недели наличными платили больше чем картой. Наличными - {1}, картой- {2}", x+1,nr,br);
             }
-
+                                  
         }
     }
 }
