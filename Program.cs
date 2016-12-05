@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace masivyi
 {
     class stek
@@ -112,7 +113,19 @@ namespace masivyi
                 }
                 if (nr > br) Console.WriteLine("На {0} недели наличными платили больше чем картой. Наличными - {1}, картой- {2}", x+1,nr,br);
             }
-                                  
+            Console.WriteLine();
+            // Для сортировки массивов используется метод Array.Sort();
+            int[] h ={ 1, 0, 9, 6, 7, -6 };
+            Console.WriteLine("Массив:");
+            for (int i = 0; i < 6; i++) Console.Write("{0}  ", h[i]);
+            Console.WriteLine();
+            Array.Sort(h);
+            Console.WriteLine("Отсортированный массив:");
+            for (int i = 0; i < 6; i++) Console.Write("{0}  ", h[i]);
+       
         }
+
+       
+
     }
 }
